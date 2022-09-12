@@ -20,6 +20,7 @@ for (var i = 0; i < links.length; i++) {
     //references the array above to get the information
     a.href = links[i].url;
     a.innerHTML = links[i].label;
+    a.target="_blank";
     
     //puts the a inside the li and the li inside the ol. creating the element structure. 
     li.appendChild(a);
