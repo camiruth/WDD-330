@@ -1,14 +1,72 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Week 2</title>
 
-  <style>
-
-  </style>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-	<p>Week 2 Notes</p>
+  <h1>Week 2 Notes</h1>
+  <a href="activity.html">Team Assignment W02</a>
+  <br>
+  <a href="readingquiz.html">Reading Quiz</a>
+  <ul>
+    <h3>Chapter 2 Notes</h3>
+    <li>// this is a one line comment; /* This is a multiple line comment*/</li>
+    <li>Semi colons are not actually needed as it has a process called ASI, but it is best practice to use semi colons to reduce errors.</li>
+    <li>Javascript has reserved words that cannot be variables</li>
+    <li>Primitive Data Types: String, Symbol, Number, Boolean, Undefined, Null</li>
+    <li>Variables uses const or let (var...but it is no widely used anymore). Const cannot be changed. Const is good for avoiding bugs because it can't be changed.</li>
+    <li>Scope- let and const only exist in their scope and are considered block scoped.</li>
+    <li>2 kinds of scopes= Global Scope and Local Scope, global variable that is accessible to everyone in the program; local is defined in a block of code</li>
+    <li>naming varibles is better than just using letters; names can start with upper or lowercase letters, underscore, or dollar character. can contain numbers but cannot start with them.  </li>
+    <li>strings...single quotes unless you need to use an apostrophe you use double. or you can use a backslash before the apostrophe and single quotes.</li>
+    <li>Symbol() needs description in the function. use typeof to return the symbol.</li>
+    <li>Number is both a whole number and a decimal. exponential notation is written in scientific notation.</li>
+    <li>+= is the same as points = points + 10, you can do this for all operators.</li>
+    <li>Incrementing by 1 ++</li>
+    <li>Us the Number method to change strings into numbers i.e. Number('23'); NaN is returned if it is a word and not a number. Same goes for changing a string to a number. i.e. String(3);</li>
+    <li>parseInt has no decimal places; parseFloat add the decimal part of the number as well.</li>
+    <li>Null= 0; undefined = NaN</li>
+    <li>Logical AND &&, Logical OR ||, == soft equality, === hard equality, != soft inequality, !== hard inequality</li>
+  </ul>
+  <ul>
+    <h3>Chapter 3 Notes</h3>
+    <li>Arrays ordered list of values, empty array [], deleting in an array still leaves an undefined value in the array</li>
+    <li>.pop() removes the last item in an array, .shift() removes the first item </li>
+    <li>slice() non destructive, splice() destructive to the array</li>
+    <li>Multidimensional arrays are arrays that contain other arrays</li>
+    <li>Arrays have lots of methods that can be used to manipulate items in the array</li>
+    <li>Sets are ordered lists of non-duplicate values; maps are ordered lists of key-value pairs</li>
+    <li>Sets are created using new Set(), can add values using variable.add().add().add()</li>
+    <li>Maps created using new Map(), </li>
+    <li>If and else statements help with code flowing, switch statements can help simplify if and else statements</li>
+    <li>while and do while loops can be used to repeat a block of code while a condition is still true</li>
+    <li>If the loop never stops, it will cause problems for the page resulting in shutting down.</li>
+    <li>all loops are similar but use different ways to go about them.</li>
+  </ul>
+  <ul>
+    <h3>Chapter 4 Notes</h3>
+    <li>Functions- declaration (function name(){}); function expression (const goodbye = fucntion name(){})(Needs a semicolon after the function block)</li>
+    <li>Constructor functions are not the smartest to use as you put the function body in a string.</li>
+    <li>parentheses are needed to run the code of a function. ie goodbye(), however if you want to reference it you can without invoking it by just using the name of the function. </li>
+    <li>Parameters and arguments are an input for a function. Parameters = set when function is defined, Arguments = invoked functions are given the agruments.</li>
+    <li>Arrow Functions (parameters => main body of the function), need to assign them a variable. (const square = x => x*x;)</li>
+    <li>Advantages of arrow functions: less verbose than normal declarations, single parameters don't need putting into paraentheses, the body doens need placing in a block, return keyword isn't required if it is the only statment in the body, don't bind their own value of this to the function.</li>
+    <li>A callback is a function that is provided as an argument to another function. </li>
+    <li>Function declarations can be invoked before they are defined because they are hoisted to the top of the scope, but function expressions cannot be invoked until after they are defined.</li>
+  </ul>
+  <ul>
+    <h3>Questions</h3>
+    <li>What is a situation that you would want to use maps over sets? Or do they work together? </li>
+    <li>Does the rest operator for a function to make an array not get a name like other functions? Same with the mean function.</li>
+    <li>In what situation would you use hoisting? </li>
+  </ul>
 </body>
+
 </html>
