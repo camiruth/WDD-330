@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Week 3</title>
+
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <h1>Week 3 Notes</h1>
+  <a href="teamassignment.html">Team Assignment W03</a>
+  <br>
+  <a href="cardioday2.html">Cardio Day 2 Assignment</a>
+  <br>
+  <a href="readingquiz.html">Heros Quiz</a>
+  <br>
+  <a href="events.html">Events Reading Practice</a>
+  <br>
+  <a href="heroes.html">Heroes Reading Practice</a>
+  <ul>
+    <h3>Object Methods: This Notes</h3>
+    <li>Objects are created to represent entities. Actions are represented by a function.</li>
+    <li>Functions that are stored in object properties are called "methods"</li>
+    <li>Methods allow objects to "act" like 'object.doSomething()</li>
+    <li>Using objects as entities is called object-oriented programming (OOP)</li>
+    <li>user.name can be overwritten, this.name will not because it is taken from inside the alert.</li>
+    <li>'this' can be used in any function, even if it is not a method. </li>
+    <li>In Javascript, this is free, its value is evaluated at call-time and does not depend on where the method was declared, but rather on what object is "before the dot".</li>
+    <li>Arrow functions do not have 'this'. It is taken from the outer function.</li>
+  </ul>
+  <ul>
+    <h3>Chapter 5 Notes: Objects</h3>
+    <li>Object is a self-contained set of related values and functions. They are flexible and can be employed to encapsulate code that can be reused. Also, they can inherit properties from other objects. </li>
+    <li>To create an object, just enter a pair of curly braces. You can also use a constructor function. Access the properties of an object using the dot notation or bracket notation. </li>
+    <li>Calling method you can use the dot or bracket notation but you will need the () after the method name.</li>
+    <li>In operator is used to check whether an object has a particular property. Or you could use hasOwnProperty(). This will check if it has its own property rather than inheriting it.</li>
+    <li>Object.keys() will return all the keys in a n object. Object.values() is just for the values and not the keys. Object.entries() returns an array of the key-value pairs.</li>
+    <li>Add properties by "superman.city = 'Metropolis';" They do not add in any particular order. </li>
+    <li>Change properties by "superman['real name'] = 'Kal-El';"</li>
+    <li>Delete properties by "delete superman.fly"</li>
+    <li>It is possible to have nested objects. Objects have have objects. Reference them by "variable.object.object"</li>
+    <li>Naming collisions happens when the same variable or function name is used for different purposes by code sharing the same scope. To combat, place all functions inside an object, creating a namespace for them.</li>
+    <li>JSON- used for data serialization and configuration. Use parse() to take a string in JSON and return a JavaScript object. stringify() does the opposite and takes a Javascript object and converts it to a JSON string.</li>
+    <li>Math object has eight properties that represent a mix of commonly used math constants.</li>
+    <li>Date objects contain information about dates and times. "new Date(year,month,day,hour,minutes,seconds,milliseconds)"</li>
+    <li>Character groups represents any one of the characters inside the brackets. /[A-Z]/</li>
+    <li>The Regex object can be used to create regular expressions.</li>
+  </ul>
+  <ul>
+    <h3>Chapter 6 Notes: Document Object Model</h3>
+    <li>Document Object Model (DOM) represents an HTML document as a network of connected nodes that form a tree-like structure. It can be used by any programming language, not just javascript.</li>
+    <li>DOM helps to access all elements on a page. It started with images, links and forms. Now it includes all elements within the webpage.</li>
+    <li>All nodes have a numerical code to signify what type they are. </li>
+    <li>You can retrieve elements by ID, their tag name, and class name. </li>
+    <li>the childNodes property returns all the nodes that are children of an element. This will include any text nodes, and since whitespace is treated as a text node, there will often be empty text nodes in this collection.</li>
+    <li>All HTML elements have a large number of possible attributes such as 'class', 'id', src, and 'href'. The DOM has numerous getter and setter methods that can be used to view, add, remove or modify the value of any of these attributes.</li>
+    <li>getAttribute() or setAttribute() or className</li>
+    <li>classList is a list of all the classes an element has</li>
+    <li>Markup can be added to the page using the appendChild() and insertBefore() methods.</li>
+    <li>Elements can be replaced using the replaceChild() method, and removed using the removeChild() method.</li>
+    <li>The CSS properties of an element can be changed by accessing the style property.</li>
+  </ul>
+  <ul>
+    <h3>Chapter 7 Notes: Events</h3>
+    <li>Event listeners are notifications in Javascript= document.body.addEventListener("click", doSomething);</li>
+    <li>The addEventListener() method is called on a node object, the node to which the event listener is being applied. For example, this code will attach an event listener to the document’s body: document.body.addEventListener('click',doSomething);</li>
+    <li>Can record the different types of properties for an event like a click. Also can record where the event took place on the page via screenx screenY, clientx clientY, or pageX pageY </li>
+    <li>Events can be recorded for hitting keys, or scrolling. Many different ways to create a event listener.</li>
+    <li>Touch Events for phones and Ipads where it records where you finger touched and what it touched. Touch events are difficult to implement and still being marked as experimental. </li>
+    <li>Event propagation is the order that the events fire on each element. There are two forms of event propagation: bubbling and capturing.</li>
+    <li>The default behavior of elements can be prevented using the preventDefault() function.</li>
+    <li>Event propagation is the order the events fire on each element.</li>
+    <li>Event delegation is when an event listener is added to a parent element to capture events that happen to its children elements.</li>
+  </ul>
+  <ul>
+    <h3>Questions</h3>
+    <li>When would you use JSON verse just making it all Javascript objects?</li>
+    <li>I feel like recording all events happening on a webpage would get overwhelming and almost too much data. What is a real life use case for event listeners?</li>
+  </ul>
+</body>
+
+</html>
