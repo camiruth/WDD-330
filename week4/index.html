@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Week 4</title>
+
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <h1>Week 4 Notes</h1>
+  <a href="teamassignment4.html">Team Assignment W04</a>
+  <br>
+  <a href="quizninja.html">Reading Quiz Ninja</a>
+  <br>
+  <a href="search.html">Reading Search Practice</a>
+  <br>
+  <a href="hero.html">Reading Hero Practice</a>
+  <br>
+
+  <ul>
+    <h3>Chapter 8 Notes: Forms</h3>
+    <li>Forms are input fields that can be submitted to the backend or processed on the front end using Javascript and then sending it to the backend. </li>
+    <li>Legacy DOM has a property called document.forms, it returns the forms in a document in the order they appear in the markup. const form = document.forms[0]; or const form = document.forms['search'];</li>
+    <li>Forms contain input elements and button elements. const [input,button] = form.elements; or with the name const input = form['searchInput'};</li>
+    <li>To submit and reset, these can be form.reset() and form.submit(), form.action sends to a different url to be processed by the server.</li>
+    <li>Other form controls are "input(field, including text, passwords, check boxes, radio buttons, and file uploads), select(menus for drop-down lists of options), textarea(elements for longer text entry), button(elements for submitting and resetting forms) </li>
+    <li>Type="password" is just like text but the password will be concealed.</li>
+    <li>Checkboxes can be checked in the HTML or in the JS as well. js= document.forms.hero.powers[0].checked = true; or HTML= input type='checkbox' value='Flight' name='powers' checked. This is the same with radio buttons as well. </li>
+    <li>Textareas long pieces of text over multiple lines such as a comment or blog post.</li>
+    <li>Form Validation is a process of checking if the user has entered the information correctly. examples are: a required field is complete, an email address is valid, a number is entered when numerical data is required, a password is at least a minimum number of characters.</li>
+    <li>It is best practice to have validation on the client-side and also the server side.</li>
+    <li>Forms have focus, blur, and change events that fire as a user interacts with the form.</li>
+    <li>The HTML5 form validation API can be used to automatically validate a form, but only at a basic level, so a custom validation script may be required.</li>
+  </ul>
+  <ul>
+    <h3>Chapter 12 Notes: Object Oriented Programming</h3>
+    <li>OOP involved separating code into objects that have properties and methods. Used to represent objects in the real world.</li>
+    <li>There are three main concepts in OOP: encapsulation, polymorphism and inheritance.</li>
+    <li>Encapsulation: inner working kept hidden inside an object and only the essential functionalities are exposed. </li>
+    <li>Polymorphism: the same process can be used for different objects; various objects can share the same method, but also have the ability to override shared methods with a more specific implementation.</li>
+    <li>Inheritance: taking the features of one object then adding some new features; take an object that exists and inherits all its properties and methods.</li>
+    <li>Constructor function: defines the properties and methods of an object.</li>
+    <li>JavaScript contains a number of built-in constructor functions such as Object, Array, and Function that can be used to create objects, arrays and functions instead of literals.</li>
+    <li>By convention, the names of constructor functions or class declarations are capitalized, which is the convention used for classes in class-based programming languages.</li>
+    <li>static methods are not available to instances of the class= redDice, blueDice</li>
+    <li>Prototypal Inheritance: every class has a prototype property that is shared by every instance of the class. All classes and constructor functions have a prototype property that returns an object:</li>
+    <li>It is not possible to overwrite the prototype by assigning it to a new object literal if class declarations are used; however, you can assign new values to the object instance.</li>
+    <li>Default for object methods are public which can be bad to give the public access to too much. Can change the scope to make it private.</li>
+    <li>Polymorphism is a concept that different objects can have the same method, but implement it in different ways. </li>
+    <li>Monkey Patching- frowned upon in most programming communities and is adding more methods to a prototype of Javascript's built in objects to add more functionality.</li>
+    <li>All object properties have the following attributes stored: Value (this is the value of the property and is undefined by default), writable (this boolean value shows whether a property can be changed or not and is false), enumerable (the boolean calue show whether a property will show up when the object is displayed in a for in loop and is false), configurable (this boolean value shows whether you can delete a property or change any of its attributes and is false.)</li>
+    <li>An object property can have get() and set() methods instead of a value attribute.</li>
+    <li>A mixin is a way of adding properties and methods of some objects to another object without using inheritance. Each mixins has a return value of this.</li>
+    <li>Chaining Functions to form a sequence of methods called. (superman.fly().move().xray();)</li>
+    <li>The value of this is not retained inside nested functions, which can cause errors. This can be worked around by using that = this, using the bind(this) method and using arrow functions.</li>
+    <li>Methods can be borrowed from other objects.</li>
+    <li>Composition over inheritance is a design pattern where objects are composed from 'building-block' objects, rather than inheriting all their properties and methods from a parent class.</li>
+  </ul>
+  <ul>
+    <h3>Chapter 15 Notes: Modern Javascript</h3>
+    <li>javascript library is a piece of code that provides several methods that make it easier to achieve common tasks. </li>
+    <li>JQuery is the most popular of all the JavaScript languages. it supports older browsers, it is the most powerful and polished library that provides a considerable number of useful methods. </li>
+    <li>Advantages of libraries: helps your code be bullet proof in as many browsers as possible, help if you get stuck by a big community.</li>
+    <li>Disadvantages of libraries: increase the about of coded needed to be downloaded by a website, crashing the site, fail to do it in a precise way that you would need.</li>
+    <li>A library should not be used for a lack of understand of JS, it should speed up the development making it easier to complete common tasks.</li>
+    <li>ES6 Modules: all code is always in strict mode without the need for 'use strict', has its own global scope, value of this in the top level is undefined rather than global, you can't use HTML style comments in modules.</li>
+    <li>MVC is used mainly on server side, but in recent years has been used in JS to make it easier to organize</li>
+    <li>React (view library) was developed by Facebook and is widely successful. combines the HTML and JS to be mixed together.</li>
+    <li>Package managers allow developers to download modules from a central repository</li>
+    <li>Minification is the process of removing any redundant characters from the code in order to reduce its file size.</li>
+    <li>Files can be compressed on the server using the gzip compression tool.</li>
+    <li>Webpack can be used to bundle multiple files into a single bundle, and automate common tasks such as transpiling, minifying code and running tests.</li>
+    <li>Before code is deployed, it should be concatenated into a single file, minified and compressed. The script tag should be placed just before the closing </body> tag to ensure that all elements on the page have loaded before the script runs.</li>
+  </ul>
+  <ul>
+    <h3>Questions</h3>
+    <li>Is there a benefit to adding the placeholder text in Javascript over just adding it as an attribute to the HTML markup?</li>
+    <li>What libraries do you commonly use? Do you find them helpful in your work?</li>
+  </ul>
+</body>
+
+</html>
