@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Week 5</title>
+
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <h1>Week 5 Notes</h1>
+  <a href="teamassignment5.html">Team Assignment W05</a>
+  <br>
+  <a href="quizninja.html">Reading Quiz Ninja</a>
+  <br>
+
+  <ul>
+    <h3>Chapter 10 Notes: Testing and Debugging</h3>
+    <li>System Error- there's a problem with the system or external devices with which the program is interacting.</li>
+    <li>Programming Error- thr program contains incorrect syntax or faulty logic; it could even be as simple as a typo.</li>
+    <li>User Error- the user has entered data incorrectly, which the program is unable to handle.</li>
+    <li>Stack trace is a sequence of functions or method calls that lead to the point where the error occurred. </li>
+    <li>Warnings will cause the program to crash as it will continue to run after the warning. Like assigning a value to a variable that is undeclared.</li>
+    <li>Sometimes Javascript fails silently in the background making errors hard to detect.</li>
+    <li>ECMAScript 5 catches errors that are more bad practice but won't actually break your code. Put.... 'use strict'; in the first line of the Javascript file. </li>
+    <li>JS Lint, JS Hint, and ES Lint can be used to catch other sloppy programming practices. Can be good to enforce a programming style guide but can be fairly unforgiving.</li>
+    <li>Feature Detection: best way to determine browser support for a feature. if(window.holoDeck){virtualRality.activate();}</li>
+    <li>Modernizr is a library that offers an easy way to implement feature detection.</li>
+    <li>Debugging is a process to find out where bugs occur, alert method to show certain points in the code as it stops the program from running until clicked okay. Console.log() is also a great way to debug.</li>
+    <li>Firefox, Edge, Chrome, Safari all have a debugging tool that will help you set break points in your code and see the values that those break points.</li>
+    <li>Also, you can use the keyword debugger; to create that breakpoint.</li>
+    <li>Try, catch, and finally are used as exception handling. Any code placed inside a try block will pass any error objects to a catch block when an exception occurs. Any code inside a finally block will run if an exception does or does not occur.</li>
+    <li>Test-driven development is the practice of writing tests that fail, then writing the code that passes the test, then refactoring the code every time a new feature is implemented.</li>
+    <li>The Jest framework can be used to test your code.</li>
+</ul>
+  <ul>
+    <h3>Questions</h3>
+    <li>The import function always throws the CORS error in my code when trying to use multiple js files. Is there a reason this is happening?</li>
+    <li>Do you prefer using the MVC method with Javascript?</li>
+  </ul>
+</body>
+
+</html>
