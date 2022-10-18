@@ -19,6 +19,10 @@ const links = [{
         label: "Week5 notes",
         url: "week5/index.html",
     },
+    {
+        label: "ToDo App",
+        url: "todoapp/todoapp.html",
+    },
 ];
 
 //Getting the ol list from the HTML code
