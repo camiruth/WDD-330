@@ -11,24 +11,28 @@
 </head>
 
 <body>
-    <h1>Todos</h1>
-    
-    <ul class="task-box"></ul>
-    
-    <div class="controls">
-        <div class="filters">
-            <span id="all">All</span>
-            <span id="active">Active</span>
-            <span id="complete">Complete</span>
+    <div class="todosBox">
+        <h1>Todos</h1>
+
+        <ul class="task-box"></ul>
+        <br><br><br><br>
+        <div class="controls">
+            <span id="tasksLeft"></span>
+            <div class="filters">
+                <span id="all" class="border">All</span>
+                <span id="active">Active</span>
+                <span id="completed">Completed</span>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="task-input">
+                <input type="text" placeholder="Add a new task">
+                <button type="button">+</button>
+            </div>
         </div>
     </div>
 
-    <div class="wrapper">
-        <div class="task-input">
-            <input type="text" placeholder="Add a new task">
-            <button type="button">+</button>
-        </div>
-    </div>
 
     <script src="./ToDos.js"></script>
     <script src="./ls.js"></script>
