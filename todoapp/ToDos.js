@@ -1,38 +1,55 @@
-const taskInput = document.querySelector(".task-input input");
-const buttonInput = document.querySelector(".task-input button");
-const all = document.querySelector("#all");
-const active = document.querySelector("#active");
-const completed = document.querySelector("#completed");
-const tasksLeft = document.querySelector("#tasksLeft");
-taskBox = document.querySelector(".task-box");
+import { taskInput, buttonInput, all, active, completed, tasksLeft, taskBox } from "./utilities.js";
+import { getTodos, setTodos } from "./ls.js";
 
-//getting localstorage todo-list
-let todos = JSON.parse(localStorage.getItem("todo-list"));
 let filterType = 'all';
 
+const updateStatus = (selectedTask) => {
+    const todos = getTodos();
+    //getting paragraph that contains task name
+    let taskName = selectedTask.parentElement.lastElementChild;
+    if(selectedTask.checked){
+        //updating the status of selected task to completed
+        todos[selectedTask.id].completed = true;
+    } else {
+        //updating the status of selected task to active
+        todos[selectedTask.id].completed = false;
+    }
+    setTodos(todos);
+    showTodo();
+};
+
+function deleteTask(id) {
+    const todos = getTodos();
+    todos.splice(id, 1);
+    setTodos(todos);
+    showTodo();
+}
+
 function showTodo() {
+
     let li = "";
+    const todos = getTodos();
     let filteredTodos = [];
     if(filterType === 'all'){
         filteredTodos = todos;
     }
     if(filterType === 'active'){
-        filteredTodos = todos.filter((todo) => todo.status === 'active');
+        filteredTodos = todos.filter((todo) => todo.completed === false);
     }
     if(filterType === 'completed'){
-        filteredTodos = todos.filter((todo) => todo.status === 'completed');
+        filteredTodos = todos.filter((todo) => todo.completed === true);
     }
     if (filteredTodos) {
         filteredTodos.forEach((todo, id) => {
             // if todo status is completed, set the isCompleted value to checked
-            let isCompleted = todo.status == "completed" ? "checked" : "";
+            let isCompleted = todo.completed ? "checked" : "";
             li += `<li class="task">
                     <label for="${id}">
-                        <input onclick="updateStatus(this)" type="checkbox" id="${id}" ${isCompleted}>
-                        <p class="${isCompleted}">${todo.name}</p>
+                        <input class="status-checkbox" type="checkbox" id="${id}" ${isCompleted}>
+                        <p class="${isCompleted}">${todo.content}</p>
                     </label>
                     <div class="settings">
-                        <button type="button" onclick="deleteTask(${id})">X</button>
+                        <button class="delete-button" type="button">X</button>
                     </div>
                 </li>`;
         });
@@ -41,35 +58,30 @@ function showTodo() {
 
     let activeTasksLeft = 0;
     for(let i = 0; i < todos.length; i++){
-        if(todos[i].status === 'active'){
+        if(todos[i].completed === false){
             activeTasksLeft++;
         }
     } 
     tasksLeft.innerHTML = `${activeTasksLeft} tasks left`;
+
+    const checkboxes = document.querySelectorAll(".status-checkbox");
+    checkboxes.forEach(function(element) {
+        element.addEventListener("click", function(e) {
+            updateStatus(e.target);
+        });
+    });
+
+    const deleteButtons = document.querySelectorAll(".delete-button");
+    deleteButtons.forEach(function(element, id) {
+        element.addEventListener("click", function(e) {
+            deleteTask(id);
+        });
+    });
 }
 showTodo();
 
-function deleteTask(id) {
-    todos.splice(id, 1);
-    localStorage.setItem("todo-list", JSON.stringify(todos));
-    showTodo();
-}
-
-function updateStatus(selectedTask) {
-    //getting paragraph that contains task name
-    let taskName = selectedTask.parentElement.lastElementChild;
-    if(selectedTask.checked){
-        //updating the status of selected task to completed
-        todos[selectedTask.id].status = "completed";
-    } else {
-        //updating the status of selected task to active
-        todos[selectedTask.id].status = "active";
-    }
-    localStorage.setItem("todo-list", JSON.stringify(todos));
-    showTodo();
-}
-
 function addTask(e) {
+    const todos = getTodos();
     let userTask = taskInput.value.trim();
     if (e.key == "Enter" || e.type === 'click' && userTask) {
 
@@ -78,11 +90,12 @@ function addTask(e) {
         }
         taskInput.value = "";
         let taskInfo = {
-            name: userTask,
-            status: "active"
+            id: Date.now(),
+            content: userTask,
+            completed: false
         };
         todos.push(taskInfo); //adding new tasks todo
-        localStorage.setItem("todo-list", JSON.stringify(todos));
+        setTodos(todos);
         showTodo();
     }
 }
