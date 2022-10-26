@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Week 7</title>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1>Week 7 Notes</h1>
+    <a href="teamassignment7.html">Team Assignment W07</a>
+    <br>
+    <a href="quizninja.html">Reading Quiz Ninja</a>
+    <br>
+    <a href="ajax.html">AJAX Reading Practice</a>
+    <br>
+    <a href="todo.html">TODO Reading Practice</a>
+    <br>
+
+    <ul>
+        <h3>Chapter 11: Further Functions</h3>
+        <li>Call and Apply Methods- used to set a value of this in a function provided as the first argument.</li>
+        <li>Add custom properties with the description property.</li>
+        <li>Cache property holds the value and then when it is used again it is taken from the cache rather than computing it again. this is called memorization.</li>
+        <li>Immediately Invokes function expressions defines the function when it is invoked. Place parentheses at the beginning and end of the function. </li>
+        <li>To make a temporary variable, you the IIFE to swap the value of the global variables. It will only work when the IIFE is invoked.</li>
+        <li>IIFE can also be used to initialize code that will never be needed again.</li>
+        <li>IIFE can be used in self-contained block codes. This is to keep it in a private scope and that it will not interfere with other parts of the program.</li>
+        <li>Functions are able to dynamically redefine themselves in the body of the function, depending on certain conditions.</li>
+        <li>Recursive Functions invoke itself until a certain condition is met.</li>
+        <li>A closure is formed when a function returns another function that then maintains access to any variables created in the original function’s scope.</li>
+        <li>Closures have access to the variables declared in the parent function's scope and they can change these variables.</li>
+        <li>To use a generator, you need to use the asterisk symbol.</li>
+        <li>Pure functions help to make functional programming code more concise and predictable than in other programming styles</li>
+        <li>Higher-order functions are functions that accept another function as an argument, or return another function as a result, or both.</li>
+        <li>A function is said to be curried when not all arguments have been supplied to the function, so it returns another function that retains the arguments already provided, and expects the remaining arguments that were omitted when the original function was called. A final result is only returned once all the expected arguments have eventually been provided.</li>
+        <li>Callbacks are frequently used in asynchronous programming as part of the event loop. This means that a program can continue to run in a single thread while waiting for another task to be completed.</li>
+        <li>Promises can be used instead of callbacks to deal with multiple asynchronous actions in sequence. They also provide a nicer mechanism for handling errors.</li>
+        <li>Functions that return other functions are known as higher-order functions.</li>
+    </ul>
+    <ul>
+        <h3>Chapter 13: AJAX</h3>
+        <li>Ajax is a technique that allows web pages to communicate asynchronously with a server, and it dynamically updates web pages without reloading.</li>
+        <li>A client, such as a web browser, will request a resource (usually a web page) from a server, which processes the request and sends back a response to the client.</li>
+        <li>The Fetch API provides a global fetch() method that only has one mandatory argument, which is the URL of the resource you wish to fetch. </li>
+        <li>each response object has an ok property that checks to see if the response is successful. </li>
+        <li>Redirect- used to redirect to another URL. Text- takes a stream of text from the response reads it to completion and then returns a promise that resolves to a USVSting object.</li>
+        <li>File responses- Blob method is used to read a file of raw data and returns as a blob object. json method transforms a stream of JSON data into a promise that resolves to a JS object. </li>
+        <li>Request Constructor Properties- URL, method, headers, mode, cache, credentials, redirect.</li>
+        <li>Fetch API is a living standard meaning it is being updated and changed all the time; experimental technology.</li>
+        <li>The Response interface allows you to control the response received from a request or to create your own response objects.</li>
+        <li>The Request interface allows you to create a request object that contains information about the request being made, such as the URL and headers.</li>
+        <li>The Headers interface allows you to create HTTP headers that can be added to a request or response object.</li>
+        <li>The FormData interface makes it easier to send data from forms.</li>
+    </ul>
+    <ul>
+        <h3>Questions</h3>
+        <li>Do you have a real life time you have used the hyptoenuse() function?</li>
+        <li>Is there an amount of Fetch API's you can use in one function?</li>
+        <li>If you use a bunch of Fetch API's, does it slow down your code?</li>
+    </ul>
+</body>
+
+</html>
