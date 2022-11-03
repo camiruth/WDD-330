@@ -1,0 +1,101 @@
+body {
+    background-color: #3A6BA2;
+    color: white;
+}
+h1{
+    margin: 20px 20px;
+}
+
+#peopleList {
+    background-color: white;
+    color: #3A6BA2;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: auto;
+    margin-right: auto;
+}
+#peopleList td, #peopleList th {
+    border: 1px solid #ddd;
+    padding: 20px;
+  }
+  
+  #peopleList tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #peopleList tr:hover {background-color: #ddd;}
+  
+  #peopleList th {
+    padding: 20px;
+    text-align: left;
+    background-color: #3A6BA2;
+    color: white;
+  }
+  #prev{
+    background-color: #A23A5B;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 2px;
+    cursor: pointer;
+  }
+  #next{
+    background-color: #A23A5B;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 2px;
+    cursor: pointer;
+  }
+  #buttonDiv {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 5%;
+  }
+  #backButton{
+    background-color: #A23A5B;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 2px;
+    cursor: pointer;
+  }
+  .personName{
+    background-color: white;
+    color:#3A6BA2;
+    font-size: 35px;
+    text-align: center;
+    padding: 5px;
+  }
+  .info {
+    background-color: white;
+    color: #3A6BA2;
+
+  }
+  .info div {
+    border: 1px solid black;
+    padding: 10px 2px;
+  }
+  .info div:nth-child(even){
+    background-color: #f2f2f2;
+  }
+
+  .label {
+    font-weight: bold;
+    font-size: 20px;
+  }

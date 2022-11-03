@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Week 8</title>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1>Week 8 Notes</h1>
+    <a href="teamassignment8.html">Team Assignment W08</a>
+    <br>
+    
+    <ul>
+        <h3>Chapter 8: Transforms and Transitions</h3>
+        <li>The CSS3 transform property lets you lets you translate, rotate, scale, and/or skew any element on the page</li>
+        <li>Translation functions allow you to move elements left, right, up, or down</li>
+        <li>translate(x,y) function moves an element x from the left, and y from the top; transform: translate(45px, -45px);</li>
+        <li>scale(x,y) function scales an element by the defined factors horizontally then vertically.</li>
+        <li>rotate() function rotates an element around the point of origin by a specified angle value.</li>
+        <li>The skew(x,y) function specifies a skew along the x and y axes.</li>
+        <li>The order of transform functions does matter: if you rotate before translating, your translate direction will be on the rotated axis. </li>
+        <li>Transitions allow the values of CSS properties to change over time, essentially providing simple animations.</li>
+        <li>Here are the steps to create a simple transition using only CSS:
+            Declare the original state of the element in the default style declaration.
+            Declare the final state of your transitioned element; for example, a :hover state.
+            Include the transition functions in your default style declaration using the transition properties, including: transition-property, transition-duration, transition-timing-function, and transition-delay. We’ll look at each of these and how they work shortly.</li>
+        <li> transition-property property defines the CSS properties of the element that should be transitioned, with all for all properties being the default.</li>
+        <li>To support older WebKit browsers, you need to include the -webkit- prefix for all of your transition properties. </li>
+        <li>The transition-duration property sets how long the transition will take: the duration of time it takes to go from the default state to the transitioned state.</li>
+        <li>The transition-timing-function lets you control the pace of the transition in even more granular detail. </li>
+        <li>the transition-delay property, it’s possible to introduce a delay before the transition begins.</li>
+        <li>The transition properties allow for multiple transitions in one call</li>
+        <li>To create an animation, use the @keyframes rule for IE10+ and FF16+. Include @-webkit-keyframes for all WebKit implementations followed by a name of your choosing, which will serve as the identifier for the animation. Then, you can specify your keyframes.</li>
+        <li>The animation-iteration-count property lets you define how many times the animation will play through.</li>
+        <li>The animation-play-state property defines whether the animation is running or paused</li>
+    </ul>
+    <ul>
+        <h3>Chapter 12: Canvas, SVG, and Drag and Drop</h3>
+        <li>With HTML5's Canvas API, we can draw anything we can imagine, all through JavaScript. This can improve the performance of our websites by avoiding the need to download images off the network. </li>
+        <li>Canvas was first developed by Apple. It was then adopted by Mozilla and Opera, and then standardized by the WHATWG (and subsequently picked up by the W3C, along with the rest of HTML5).</li>
+        <li>HTML canvas needs a width and height as well you can add an id or class to it. </li>
+        <li>Getting the canvas from the HTML in JS. var canvas = document.getElementById("myCanvas");</li>
+        <li>In the canvas coordinate system, the top-left corner is (0,0). If the canvas is 200 pixels by 200 pixels, then the bottom-right corner is (200,200)</li>
+        <li>Instead of a color as our fillStyle, we could have used a CanvasGradient or a CanvasPattern object</li>
+        <li>Paths create a blueprint for your lines, arcs, and shapes, but paths are invisible until you give them a stroke!</li>
+        <li>An arc is a segment of a circle, but as there’s no method for creating a circle, we can draw a 360° arc. We create it using the arc method:</li>
+        <li>If we create an image programmatically using the Canvas API, but decide we’d like to have a local copy of our drawing, we can use the API’s toDataURL method to save our drawing.</li>
+        <li>Redrawing an image element from the page onto a canvas is fairly unexciting. It’s really no different from using an img element. </li>
+        <li>Creating the pixelData variable, which is then used several times in the for loop, saves us several property lookups</li>
+        <li>The first step is to add an error handling try / catch block to catch the error</li>
+        <li>SVG stands for Scalable Vector Graphics, a specific file format that allows you to describe vector graphics using XML.</li>
+        <li>To save ourselves some work (and sanity), instead of creating SVG images by hand, we can use an image editor to help. </li>
+        <li>Raphaël is an open-source JavaScript library that makes drawing and animating with SVG much easier.</li>
+        <li>Canvas allows for pixel manipulation. </li>
+        <li>Drag and Drop API allows us to specify that certain elements are draggable, and then specify what should happen when these draggable elements are dragged over or dropped onto other elements on the page</li>
+    </ul>
+    <ul>
+        <h3>Questions</h3>
+        <li>Have you ever used canvas to draw shapes? Seems like a lot more work than using a library. </li>
+        <li>Animation looks amazing but my question would be, how often do you use animation in programming?</li>
+    </ul>
+</body>
+
+</html>
