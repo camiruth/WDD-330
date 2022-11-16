@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Week 10</title>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1>Week 10 Notes</h1>
+    <a href="quakes.html">Team Assignment W10</a>
+    <br>
+    <ul>
+        <h3>MDN: Validating Forms</h3>
+        <li>Client side form validation is ensuring all required form controls are filled out, in the correct format.</li>
+        <li>Form Validation:
+            "This field is required" (You can't leave this field blank).
+            "Please enter your phone number in the format xxx-xxxx" (A specific data format is required for it to be considered valid).
+            "Please enter a valid email address" (the data you entered is not in the right format).
+            "Your password needs to be between 8 and 30 characters long and contain one uppercase letter, one symbol, and a number." (A very specific data format is required for your data).</li>
+        <li>Reasons to use validation: We want to get the right data, in the right format, We want to protect our users' data, and We want to protect ourselves.</li>
+        <li>Built-in form validation uses HTML form validation features or JavaScript validation is coded using JavaScript</li>
+        <li> A regular expression (regex) is a pattern that can be used to match character combinations in text strings, so regexps are ideal for form validation and serve a variety of other uses in JavaScript.</li>
+        <li>You can constrain the character length of all text fields created by input or textarea by using the minlength and maxlength attributes</li>
+        <li>Most browsers support the Constraint Validation API, which consists of a set of methods and properties available on the following form element DOM interfaces</li>
+        <li>Every time we change the value of the input, we check to see if it contains valid data. If it has then we remove any error message being shown. If the data is not valid, we run showError() to show the appropriate error.</li>
+        <li>Every time we try to submit the form, we again check to see if the data is valid. If so, we let the form submit. If not, we run showError() to show the appropriate error, and stop the form submitting with preventDefault().</li>
+        <li>The showError() function uses various properties of the input's validity object to determine what the error is, and then displays an error message as appropriate.</li>
+        <li>The constraint validation API gives you a powerful tool to handle form validation, letting you have enormous control over the user interface above and beyond what you can do with HTML and CSS alone.</li>
+    </ul>
+    <ul>
+        <h3>MDN: Using Fetch</h3>
+        <li>The Fetch API provides a JavaScript interface for accessing and manipulating parts of the protocol, such as requests and responses.</li>
+        <li>To cause browsers to send a request with credentials included on both same-origin and cross-origin calls, add credentials: 'include' to the init object you pass to the fetch() method.</li>
+        <li>Files can be uploaded using an HTML input type="file"  input element, FormData() and fetch().</li>
+        <li>Multiple files can be uploaded using an HTML input type="file" multiple  input element, FormData() and fetch().</li>
+        <li>An accurate check for a successful fetch() would include checking that the promise resolved, then checking that the Response.ok property has a value of true. </li>
+        <li>Instead of passing a path to the resource you want to request into the fetch() call, you can create a request object using the Request() constructor, and pass that in as a fetch() method argument</li>
+        <li>The Headers interface allows you to create your own headers object via the Headers() constructor.</li>
+        <li>Since headers can be sent in requests and received in responses, and have various limitations about what information can and should be mutable, headers' objects have a guard property.</li>
+        <li>Response instances are returned when fetch() promises are resolved.</li>
+        <li>The Request and Response interfaces share the following methods to extract a body. These all return a promise that is eventually resolved with the actual content.</li>
+        <li>Fetch API support can be detected by checking for the existence of Headers, Request, Response or fetch() on the Window or Worker scope</li>
+    </ul>
+    <ul>
+        <h3>Questions</h3>
+        <li>Do you use an the built-in form validation in HTML or do you usually build it out in javascript?</li>
+        <li>Is Fetch the only way to pull in data from an API? Or is it just the most common one people use?</li>
+    </ul>
+</body>
+
+</html>
