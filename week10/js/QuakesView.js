@@ -20,7 +20,7 @@ class QuakesView {
     //     } else return `<li>${item[0]}: ${item[1]}</li>`;
     //   })
     //   .join('');
-    console.log('quake.propertis', quake.properties);
+    console.log('quake.properties', quake.properties);
     element.innerHTML = `
         <div id="quakeInfo">
             <div class="rowInfo">
