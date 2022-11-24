@@ -39,6 +39,10 @@ const links = [{
         label: "Week10 notes",
         url: "week10/index.html",
     },
+    {
+        label: "Week11 Team Assignment",
+        url: "week11/client/week11.html",
+    },
 ];
 
 //Getting the ol list from the HTML code
