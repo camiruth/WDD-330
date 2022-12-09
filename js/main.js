@@ -47,6 +47,10 @@ const links = [{
         label: "Block 2 Assignment",
         url: "block2assignment/index.html",
     },
+    {
+        label: "Final Portfolio Video",
+        url: "https://www.loom.com/share/a823494ca737411d87f9a8a4c2a2ed75",
+    },
 ];
 
 //Getting the ol list from the HTML code
